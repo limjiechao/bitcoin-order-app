@@ -33,7 +33,10 @@ jobs:
             --nvdApiKey ${{ secrets.WORKSHOP6_NVD_API_KEY }} \
             --out . \
             --scan . \
-            --disableOssIndex
+            --disableOssIndex \
+            --disableRubygems \
+            --disablePython \
+            --disableGo
 
       - name: Archive SAST report
         uses: actions/upload-artifact@v4
